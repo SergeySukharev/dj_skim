@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>
+            Python  script
+        </title>
+    </head>
+ <style>
+   .box1 {
+    background: #f0f0f0; /* Цвет фона */
+    width: 400px; /* Ширина блока */
+    padding: 10px; /* Поля */
+    border: 2px solid #000; /* Параметры рамки */
+   }
+   .box2 {
+    background: #fc0; /* Цвет фона */
+    width: 370px; /* Ширина блока */
+    padding: 10px; /* Поля */
+    margin-top: 10px; /* Отступ сверху */
+    border: 2px solid #000; /* Параметры рамки */
+    -moz-box-sizing: border-box; /* Для Firefox */
+    box-sizing: border-box; /* Ширина блока с полями */
+   }
+  </style>
+
+    <body>
+        <a href="{% url 'index' %}">Home</a> <hr>
+        <a href="{% url 'ratios' %}">Ratios</a> <hr>
+        <a href="{% url 'grow_fact' %}">Grow fact</a> <hr>
+        <a href="{% url 'grow_plan' %}">Grow plan</a> <hr>
+        <a href="{% url 'itog' %}">Itog</a> <hr>
+        <a href="{% url 'inf_mon' %}">Influence month</a> <hr>
+        <a href="{% url 'inf_kva' %}">Influence kvartal</a> <hr>
+        <a href="{% url 'inf_day' %}">Influence day</a> <hr>
+        <a href="{% url 'inf_coef' %}">Influence coef</a> <hr>
+        <a href="{% url 'income' %}">Income</a> <hr>
+        <a href="{% url 'bez_sutok' %}">Bez sutok</a> <hr>
+        <a href="{% url 'dev_mon' %}">Deviation month</a> <hr>
+        <a href="{% url 'dev_kva' %}">Deviation kvartal</a> <hr>
+        <a href="{% url 'dev_day' %}">Deviation day</a> <hr>
+
+
+        {% if data %}
+
+        {% for i in data %}
+        <div>{{ i }}</div>
+        {% endfor %}
+
+        {% endif %}
+
+        </body>
+</html>
